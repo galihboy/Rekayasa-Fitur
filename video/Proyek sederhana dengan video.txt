@@ -1,0 +1,93 @@
+Data Video.
+
+1. Klasifikasi Genre Video Pendek:
+
+- Tujuan: Mengklasifikasikan video pendek (misalnya, 10-30 detik) ke dalam genre seperti aksi, komedi, olahraga, dll.
+- Fitur:
+    -> Fitur warna (histogram, rata-rata warna)
+    -> Fitur gerakan (optical flow, MHI)
+    -> Fitur audio (jika ada) seperti tempo, jenis musik
+- Model: Klasifikasi sederhana seperti SVM, Naive Bayes, atau Random Forest.
+- Dataset: Kumpulkan video pendek dari YouTube atau sumber lain, beri label genre secara manual.
+
+2. Deteksi Objek Bergerak:
+
+- Tujuan: Mendeteksi dan melacak objek yang bergerak dalam video (misalnya, orang, kendaraan).
+- Fitur:
+    -> Perbedaan piksel antar frame
+    -> Background subtraction (jika latar belakang statis)
+    -> Optical flow
+- Model:
+    -> Pendekatan sederhana: Thresholding pada perbedaan piksel
+    -> Pendekatan lebih lanjut: Pelacakan objek dengan algoritma seperti MeanShift atau CAMShift.
+- Dataset: Video dengan objek bergerak yang jelas (misalnya, rekaman CCTV, video lalu lintas).
+
+3. Pengenalan Emosi dari Ekspresi Wajah:
+
+- Tujuan: Mengidentifikasi emosi (senang, sedih, marah, dll.) dari ekspresi wajah dalam video.
+- Fitur:
+    -> Fitur wajah (posisi landmark wajah, jarak antar landmark)
+    -> Fitur gerakan wajah (perubahan ekspresi dari waktu ke waktu)
+- Model:
+    -> Klasifikasi dengan SVM, Random Forest, atau jaringan saraf tiruan sederhana.
+    -> Bisa juga menggunakan model pre-trained untuk deteksi wajah dan landmark.
+- Dataset: Kumpulkan video orang dengan ekspresi wajah yang jelas, beri label emosi secara manual.
+
+4. Pencarian Video Berdasarkan Adegan:
+
+- Tujuan: Mencari video yang memiliki adegan serupa (misalnya, adegan pantai, adegan perkotaan).
+- Fitur:
+    -> Fitur warna (histogram, rata-rata warna)
+    -> Fitur tekstur (misalnya, Local Binary Patterns - LBP)
+    -> Fitur adegan (misalnya, sky detection, building detection)
+- Model:
+    -> Perhitungan jarak antar fitur (misalnya, Euclidean distance, cosine similarity)
+    -> Metode pengelompokan (clustering) untuk menemukan video serupa
+- Dataset: Kumpulkan video dengan berbagai adegan, beri label adegan secara manual.
+
+Tips Tambahan:
+
+- Mulai dengan proyek yang sederhana dan tingkatkan kompleksitasnya seiring pemahaman Anda.
+- Gunakan library seperti OpenCV untuk memudahkan ekstraksi dan pemrosesan fitur.
+- Jangan ragu untuk berkreasi dan mencoba ide-ide baru!
+
+
+============
+
+
+Data Webcam.
+
+1. Deteksi dan Pelacakan Gerakan dengan Optical Flow:
+
+   - Konsep: Tampilkan video dari webcam dan visualisasikan optical flow secara real-time menggunakan metode Farneback atau Lucas-Kanade.
+   - Hasil Visual: Tampilkan panah atau colormap yang menunjukkan arah dan besar gerakan pada setiap piksel atau titik fitur.
+   - Interaksi: Biarkan mahasiswa bergerak di depan webcam dan amati bagaimana visualisasi optical flow berubah sesuai dengan gerakan mereka.
+   - Penjelasan: Jelaskan bagaimana optical flow dapat digunakan untuk mendeteksi dan melacak gerakan, serta aplikasinya dalam berbagai bidang seperti robotika, augmented reality, dan analisis video.
+
+2. Deteksi dan Pelacakan Wajah:
+
+   - Konsep: Gunakan model deteksi wajah yang sudah dilatih (misalnya, Haar Cascade atau model berbasis deep learning) untuk mendeteksi wajah dalam video webcam.
+   - Hasil Visual: Gambar bounding box di sekitar wajah yang terdeteksi dan tampilkan informasi tambahan seperti jumlah wajah yang terdeteksi.
+   - Interaksi: Biarkan mahasiswa bergerak di depan webcam dan amati bagaimana deteksi wajah bekerja secara real-time.
+   - Penjelasan: Jelaskan bagaimana deteksi wajah dapat digunakan dalam berbagai aplikasi seperti pengenalan wajah, analisis emosi, dan sistem keamanan.
+
+3. Pengenalan Gerakan Tangan:
+
+   - Konsep: Gunakan deteksi objek atau segmentasi tangan untuk mengidentifikasi gerakan tangan tertentu (misalnya, melambaikan tangan, mengepalkan tangan).
+   - Hasil Visual: Tampilkan label atau visualisasi lain yang menunjukkan gerakan tangan yang terdeteksi.
+   - Interaksi: Biarkan mahasiswa mencoba berbagai gerakan tangan di depan webcam dan amati bagaimana sistem mengenali gerakan tersebut.
+   - Penjelasan: Jelaskan bagaimana pengenalan gerakan tangan dapat digunakan dalam antarmuka pengguna berbasis gestur, permainan interaktif, atau aplikasi kesehatan (misalnya, terapi fisik).
+
+4. Efek Visual Real-time:
+
+   - Konsep: Terapkan berbagai efek visual pada video webcam secara real-time, seperti filter warna, mirroring, atau distorsi gambar.
+   - Hasil Visual: Tampilkan video yang sudah dimodifikasi dengan efek visual.
+   - Interaksi: Biarkan mahasiswa bereksperimen dengan berbagai efek visual dan amati bagaimana efek tersebut mengubah tampilan video.
+   - Penjelasan: Jelaskan bagaimana manipulasi piksel dan frame dapat digunakan untuk menciptakan efek visual yang menarik.
+
+5. Analisis Emosi dari Ekspresi Wajah:
+
+   - Konsep: Gunakan model pengenalan emosi yang sudah dilatih untuk menganalisis ekspresi wajah dalam video webcam.
+   - Hasil Visual: Tampilkan label emosi yang terdeteksi atau visualisasi lain (misalnya, grafik batang yang menunjukkan tingkat emosi).
+   - Interaksi: Biarkan mahasiswa mencoba berbagai ekspresi wajah dan amati bagaimana sistem mengenali emosi mereka.
+   - Penjelasan: Jelaskan bagaimana analisis emosi dari ekspresi wajah dapat digunakan dalam berbagai aplikasi seperti pemasaran, pengujian pengguna (user testing), atau kesehatan mental.
